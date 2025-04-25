@@ -10,7 +10,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* olhar */
   font-family: var(--fonte-corpo);
   color: var(--cor-texto);
 }
@@ -25,11 +25,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* olhar */
   background: var(--cor-fundo);
   position: sticky;
-  top: 0;
-  z-index: 10;
+  top: 0px;
+  z-index: 10; /* olhar */
 }
 
 .logo {
@@ -40,7 +40,7 @@ header {
 }
 
 .nav-list input {
-  display: none;
+  display: none; /* olhar para que serve*/
 }
 
 .links-container ul {
@@ -51,9 +51,8 @@ header {
 
 .links-container a {
   text-decoration: none;
-  font-weight: 500;
   transition: color 0.3s;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
 }
 
 .links-container a:hover {
@@ -64,7 +63,7 @@ header {
   margin-left: 1rem;
   font-size: 1.2rem;
   color: var(--cor-texto);
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 .header-icons a:hover {
@@ -76,7 +75,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 2rem;
+  padding: 1rem 5rem;
 }
 
 .banner-text h1 {
@@ -92,7 +91,7 @@ header {
 }
 
 .btn-principal {
-  display: inline-block;
+  display: inline-block; /* olhar para que serve*/
   background: var(--cor-destaque);
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -110,16 +109,16 @@ header {
 .banner-image img {
   max-width: 500px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 /* Seção de Destaques de Produtos */
-.featured {
+.destacados {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 3rem;
 }
 
-.featured h2 {
+.destacados h2 {
   font-family: var(--fonte-titulos);
   font-size: 2.5rem;
   color: var(--cor-destaque);
@@ -127,10 +126,11 @@ header {
 }
 
 .cards {
+  /* olhar para pq tem classe cards e card*/
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* olhar para que serve*/
 }
 
 .card {
@@ -158,13 +158,13 @@ header {
 }
 
 .preco {
-  display: block;
+  display: block; /* olhar para que serve*/
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .btn-secundario {
-  display: inline-block;
+  display: inline-block; /* olhar para que serve*/
   border: 2px solid var(--cor-destaque);
   color: var(--cor-destaque);
   padding: 0.5rem 1rem;
@@ -180,32 +180,32 @@ header {
 }
 
 /* Seção de Contato */
-.contact {
+.contato {
   background: #fafafa;
   padding: 3rem 2rem;
 }
 
-.contact-form {
+.contato-form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* olhar para que serve*/
   text-align: center;
 }
 
-.contact-form h2 {
+.contato-form h2 {
   font-family: var(--fonte-titulos);
   font-size: 2rem;
   color: var(--cor-destaque);
   margin-bottom: 1.5rem;
 }
 
-.contact-form form {
+.contato-form form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contato-form input,
+.contato-form textarea {
   padding: 0.75rem 1rem;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -213,7 +213,7 @@ header {
   resize: none;
 }
 
-.contact-form button {
+.contato-form button {
   width: 100%;
   border: none;
   cursor: pointer;
@@ -225,7 +225,7 @@ header {
   transition: background 0.3s;
 }
 
-.contact-form button:hover {
+.contato-form button:hover {
   background: var(--cor-destaque-escuro);
 }
 
