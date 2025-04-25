@@ -21,13 +21,19 @@
   <body>
     <!-- Cabeçalho -->
     <header>
+
+      <!-- Botão de menu hamburguer -->
+      <div class="menu-hamburguer">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <a href="#" class="logo">Dy Luxo</a>
       <nav class="links-container">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Coleções</a></li>
           <li><a href="#">Novidades</a></li>
-          <li><a href="#">Sobre</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
           <li><a href="#">Login</a></li>
         </ul>
       </nav>
@@ -121,5 +127,17 @@
         Alberto
       </p>
     </footer>
+
+    <script>
+      // Seleciona o botão hamburguer e o menu
+      const menuHamburguer = document.querySelector('.menu-hamburguer');
+      const menuLinks = document.querySelector('.links-container ul');
+    
+      // Quando o botão hamburguer for clicado, alterna a classe "active" no menu
+      menuHamburguer.addEventListener('click', () => {
+        menuLinks.classList.toggle('active');  // ativa e desativa classe no menu de links
+      });
+    </script>
+
   </body>
 </html>
