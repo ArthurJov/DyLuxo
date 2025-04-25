@@ -5,7 +5,7 @@
 
 ---
 
-## 📖 Introdução
+## 📖 Descriçãao
 
 O **Dy Luxo** é um site de venda de joias que está sendo desenvolvido como parte de um projeto acadêmico da disciplina de Desenvolvimento Web.  
 Diferente de projetos fictícios, este site será futuramente **implementado de forma real** para uso comercial.
@@ -13,5 +13,3 @@ Diferente de projetos fictícios, este site será futuramente **implementado de 
 Este repositório contém a página de **detalhes do produto**, com imagem, descrição, preço, variações de modelo/tamanho, botão de compra e produtos relacionados.
 
 ---
-
-## 🗂️ Estrutura do Projeto
