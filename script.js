@@ -15,3 +15,16 @@ btnDarkModeToggle.addEventListener('click', function(e) {
   htmlElement.setAttribute('data-theme', themeSystem);
   localStorage.setItem('themeSystem', themeSystem);
 });
+
+
+
+/* ADICIONADO POR RUAN */
+// Seleciona o botão hamburguer e o menu
+const menuHamburguer = document.querySelector('.menu-hamburguer');
+const menuLinks = document.querySelector('.links-container ul');
+
+// Quando o botão hamburguer for clicado, alterna a classe "active" no menu
+menuHamburguer.addEventListener('click', () => {
+  menuLinks.classList.toggle('active');  // ativa e desativa classe no menu de links
+});
+/* FIM DA ADIÇÃO DE RUAN */
