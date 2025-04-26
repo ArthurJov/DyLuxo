@@ -16,9 +16,32 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+
   </head>
 
   <body>
+    <script>
+      window.addEventListener('load', function() {
+  const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
+  const containerCards = document.querySelector('.cards');
+  const produtosRecentes = produtos.slice(-3).reverse(); 
+  produtosRecentes.forEach(produto => {
+    const card = document.createElement('article');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <img src="${produto.imagem}" alt="${produto.nome}">
+      <h3>${produto.nome}</h3>
+      <p>${produto.descricao}</p>
+      <p class="preco">R$ ${produto.preco}</p>
+      <a href="/produto.html?id=${produto.id}" class="btn-secundario">Ver detalhes</a>
+    `;
+
+    containerCards.appendChild(card);
+  });
+});
+    </script>
     <!-- Cabeçalho -->
     <header>
       <a href="index.html" class="logo">DY LUXO</a>
