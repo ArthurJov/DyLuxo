@@ -162,6 +162,7 @@ header {
   color: var(--cor-destaque);
 }
 
+/*Adicionado por Luigi*/
 /*lista de produtos*/
 #listaProdutos{
   display: grid;
@@ -202,9 +203,56 @@ a{
   transform: scale(1.05);
 }
 
-input:invalid{
-  background-color: rgba(247, 179, 179, 0.925);
+/*página com detalhe do produto*/
+#detalhes-produto{
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
+
+.produto-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.produto-image{
+  flex: 1;
+  text-align: center;
+  border-radius: 10%;
+  gap: 50px;
+}
+
+.produto-image img{
+  width: 100%;
+
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.produto-info{
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  flex: 1;
+  padding: 6%;
+}
+
+.produto-info h1{
+  margin-bottom: 20px;
+  color: var(--cor-destaque);
+  font-size: 2.5rem;
+}
+
+.botao-voltar{
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: var(--cor-card-texto);
+  border-radius: 5%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+/*Fim da parte de Luigi*/
 
 .card p {
   margin-bottom: 0.5rem;

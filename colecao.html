@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/Logo.png" type="image/png" />
-    <link rel="stylesheet" href="colecao.css" />
-    <title>Sobre - Dy Luxo</title>
+    <link rel="stylesheet" href="/produtos.css" />
+    <title>Produto - Dy Luxo</title>
 
     <!-- Biblioteca p/ ícones -->
     <link
@@ -25,12 +25,12 @@
             <i class="fa-solid fa-bars"></i>
         </div>
   
-      <a href="#" class="logo">Dy Luxo</a>
+      <a href="index.html" class="logo">Dy Luxo</a>
 
       <nav class="links-container">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="produto.html">Coleções</a></li>
+          <li><a href="colecao.html">Coleções</a></li>
           <li><a href="#">Novidades</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="#">Login</a></li>
@@ -45,14 +45,25 @@
           ><i class="fa-solid fa-cart-shopping"></i
         ></a>
         <a href="#" title="Minha Conta"><i class="fa-solid fa-user"></i></a>
+        <a id="DarkToggle" href="#" title="Trocar tema"><i class="fa fa-adjust" aria-hidden="true"></i></a>
       </div>
     </header>
 
     <!-- Conteúdo da página Produtos -->
+    <form action="" id="form-produto">
+        <input type="text" id="nome" placeholder="nome do produto" required>
+        <input type="text" id="preco" placeholder="preço do produto" required>
+        <input type="text" id="imagem" placeholder="link da imagem do produto" required>
+        <input type="text" id="descricao" placeholder="Descrição do produto" required>
+        <button type="submit">Adicionar produto </button>
+    </form>
+  
 
-    <section id="listaProdutos">
-
-    </section>
+      <!-- Conteúdo da página Produtos -->
+  
+      <section id="listaProdutos">
+  
+      </section>
 
     <!-- Rodapé -->
     <footer>
@@ -87,7 +98,6 @@
           // a classe active caso n exista, e excluindo caso exista.
         });
       </script>
-      <script src="inserir produtos.js"></script>
-      
+    <script src="script.js"> </script>      
   </body>
 </html>
