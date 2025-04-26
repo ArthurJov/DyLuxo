@@ -269,7 +269,6 @@ footer p {
 }
 
 /*ADICIONADO POR RUAN*/
-
 /* estilizaçao do nav quando clica no botao menu hamburguer*/
 .links-container ul.active {
   display: flex;  /* Mostra o menu quando a classe "active" for ativada */ /*a classe active so existe quando o javascript adiciona ela*/
@@ -301,49 +300,5 @@ footer p {
     color: var(--cor-destaque);
     cursor: pointer;
   }
-}
-
-
-/* Seção Sobre */
-.sobre-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-  gap: 3rem;
-  background-color: #fdfdfd;
-  flex-wrap: wrap;
-}
-
-.sobre-texto, .sobre-img {
-  flex: 1 1 400px; /* tamanho mínimo de 400px e expansível */
-  max-width: 500px;
-}
-
-.sobre-texto h1 {
-  font-family: var(--fonte-titulos);
-  font-size: 2.5rem;
-  color: var(--cor-destaque);
-  margin-bottom: 1.5rem;
-}
-
-.sobre-texto p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: var(--cor-texto);
-}
-
-.sobre-img {
-  text-align: center;
-}
-
-.sobre-img img {
-  width: 100%;
-  max-width: 500px;
-  min-width: 280px; /* tamanho mínimo */
-  height: auto;
-  border-radius: 12px;
 }
 /*FIM DA ADIÇAO DE RUAN*/
