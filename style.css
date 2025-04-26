@@ -3,17 +3,16 @@
   --cor-texto: #333333;
   --cor-destaque: #b89f5b;
   --cor-destaque-escuro: #8a6f4e;
-  --cor-fundo-escuro: #202020;
-  --fonte-titulos: "Playfair Display", serif;
-  --fonte-corpo: "Lato", sans-serif;
   --cor-card-fundo: #f9f9f9;
   --cor-card-texto: #333333;
   --cor-footer-fundo: #f0f0f0;
   --cor-footer-texto: #777777;
+  --fonte-titulos: "Playfair Display", serif;
+  --fonte-corpo: "Lato", sans-serif;
 }
 
 [data-theme="dark"] {
-  --cor-fundo: var(--cor-fundo-escuro);
+  --cor-fundo: #202020;
   --cor-texto: #ffffff;
   --cor-card-fundo: #2a2a2a;
   --cor-card-texto: #eeeeee;
@@ -24,7 +23,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* olhar */
+  box-sizing: border-box; /* para nao confundir os tamanhos */
   font-family: var(--fonte-corpo);
   color: var(--cor-texto);
 }
@@ -40,16 +39,16 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem; /* olhar */
+  padding: 1rem 2rem;
   background: var(--cor-fundo);
   position: sticky;
   top: 0px;
-  z-index: 10; /* olhar */
+  z-index: 100; 
 }
 
 .logo {
   font-family: var(--fonte-titulos);
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--cor-destaque);
   text-decoration: none;
 }
@@ -101,7 +100,7 @@ header {
 }
 
 .btn-principal {
-  display: inline-block; /* olhar */
+  display: inline-block;
   background: var(--cor-destaque);
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -136,11 +135,10 @@ header {
 }
 
 .cards {
-  /* olhar para pq tem classe cards e card*/
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* quebrar linha cards */
 }
 
 /* Card */
@@ -167,13 +165,13 @@ header {
 }
 
 .preco {
-  display: block; /* olhar para que serve*/
+  display: block; /* vertical 100% */
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .btn-secundario {
-  display: inline-block; /* olhar para que serve*/
+  display: inline-block;
   border: 2px solid var(--cor-destaque);
   color: var(--cor-destaque);
   padding: 0.5rem 1rem;
