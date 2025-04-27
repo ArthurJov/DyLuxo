@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/Logo.png" type="image/png" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Produto - Dy Luxo</title>
+
+    <!-- Biblioteca p/ ícones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+        <!-- Botão de menu hamburguer -->
+        <div class="menu-hamburguer">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+  
+      <a href="index.html" class="logo">Dy Luxo</a>
+
+      <nav class="links-container">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="colecao.html">Coleções</a></li>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+      <div class="header-icons">
+        <a href="#" title="Pesquisar"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></a>
+        <a href="adicionar.html" title="Favoritos"><i class="fa-solid fa-heart"></i></a>
+        <a href="#" title="Carrinho"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <a href="#" title="Minha Conta"><i class="fa-solid fa-user"></i></a>
+        <a id="DarkToggle" href="#" title="Trocar tema"><i class="fa fa-adjust" aria-hidden="true"></i></a>
+      </div>
+    </header>
+
+    <!-- Conteúdo da página Produtos -->
+    <form action="" id="form-produto">
+        <input type="text" id="nome" placeholder="nome do produto" required>
+        <input type="text" id="preco" placeholder="preço do produto" required>
+        <input type="text" id="imagem" placeholder="link da imagem do produto" required>
+        <input type="text" id="descricao" placeholder="Descrição do produto" required>
+        <button type="submit">Adicionar produto </button>
+    </form>
+  
+
+      <!-- Conteúdo da página Produtos -->
+  
+      <section id="listaProdutos">
+  
+      </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="social">
+          <a
+            href="https://www.instagram.com/dyluxo_semijoias/"
+            title="Instagram Dy Luxo"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=73991476439&text&type=phone_number&app_absent=0"
+            title="Whatsapp Dy Luxo"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+        <p>
+          ©2025 Dy Luxo. Todos os direitos reservados. <br />
+          Arthur Vieira; Bruno Luide; Luigi Peixoto; Matheus Henrique; Ruan
+          Alberto
+        </p>
+      </footer>
+
+      <!-- JavaScript para exibir opcoes quando o menu hamburguer for clicado-->
+      <script>
+        // Seleciona o botão hamburguer e o menu
+        const menuHamburguer = document.querySelector('.menu-hamburguer');
+        const menuLinks = document.querySelector('.links-container ul');
+      
+        // Quando o botão hamburguer for clicado, alterna a classe "active" no menu
+        menuHamburguer.addEventListener('click', () => {
+          menuLinks.classList.toggle('active');  // ativa/desativa classe no menu de links //o .toggle serve como um "interruptor", adicionando
+          // a classe active caso n exista, e excluindo caso exista.
+        });
+      </script>
+    <script src="script.js"> </script>      
+  </body>
+</html>

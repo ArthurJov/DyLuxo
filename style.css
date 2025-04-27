@@ -3,12 +3,16 @@
   --cor-texto: #333333;
   --cor-destaque: #b89f5b;
   --cor-destaque-escuro: #8a6f4e;
-  --cor-card-fundo: #f9f9f9;
-  --cor-card-texto: #333333;
-  --cor-footer-fundo: #f0f0f0;
-  --cor-footer-texto: #777777;
   --fonte-titulos: "Playfair Display", serif;
   --fonte-corpo: "Lato", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* olhar */
+  font-family: var(--fonte-corpo);
+  color: var(--cor-texto);
 }
 
 [data-theme="dark"] {
@@ -20,18 +24,9 @@
   --cor-footer-texto: #cccccc;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* para nao confundir os tamanhos */
-  font-family: var(--fonte-corpo);
-  color: var(--cor-texto);
-}
-
 body {
   background: var(--cor-fundo);
   line-height: 1.6;
-  transition: background 0.3s, color 0.3s;
 }
 
 /* Cabeçalho */
@@ -39,11 +34,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* olhar */
   background: var(--cor-fundo);
   position: sticky;
   top: 0;
   z-index: 10;
+
 }
 
 .logo {
@@ -78,13 +74,14 @@ header {
   font-size: 1.2rem;
   color: var(--cor-texto);
   transition: color 0.3s;
+
 }
 
 .header-icons a:hover {
   color: var(--cor-destaque);
 }
 
-/* Banner */
+/* Seção banner */
 .banner {
   display: flex;
   align-items: center;
@@ -105,7 +102,7 @@ header {
 }
 
 .btn-principal {
-  display: inline-block;
+  display: inline-block; /* olhar para que serve*/
   background: var(--cor-destaque);
   color: #fff;
   padding: 0.75rem 1.5rem;
@@ -126,7 +123,7 @@ header {
   border-radius: 20px;
 }
 
-/* Destaques */
+/* Seção de Destaques de Produtos */
 .destacados {
   text-align: center;
   padding: 3rem;
@@ -140,21 +137,19 @@ header {
 }
 
 .cards {
+  /* olhar para pq tem classe cards e card*/
   display: flex;
   justify-content: center;
   gap: 2rem;
-  flex-wrap: wrap; /* quebrar linha cards */
+  flex-wrap: wrap; /* olhar para que serve*/
 }
 
-/* Card */
 .card {
-  background: var(--cor-card-fundo);
-  color: var(--cor-card-texto);
+  background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
   width: 280px;
-  transition: background 0.3s, color 0.3s;
 }
 
 .card img {
@@ -163,20 +158,142 @@ header {
   margin-bottom: 1rem;
 }
 
-.card h3,
-.card p,
-.card .preco {
+.card h3 {
+  font-family: var(--fonte-titulos);
+  margin-bottom: 0.5rem;
+  color: var(--cor-destaque);
+}
+
+/*Adicionado por Luigi*/
+/*lista de produtos*/
+#listaProdutos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  align-items: baseline;
+  color: rgb(144, 211, 211);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.produto-card {
+  border: 1px solid var(--cor-destaque);
+  padding: 10px;
+  margin: 10px;
+  overflow: hidden;
+  max-width: 300px;
+
+  border-radius: 10%;
+  transition: transform 0.2s;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%; 
+}
+
+.produto-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+a{
   color: var(--cor-card-texto);
+  text-decoration: none;
+}
+
+.produto-card:hover {
+  transform: scale(1.05);
+}
+
+/*página com detalhe do produto*/
+#detalhes-produto{
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.produto-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.produto-image{
+  flex: 1;
+  text-align: center;
+  border-radius: 10%;
+  gap: 50px;
+}
+
+.produto-image img{
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid var(--cor-destaque);
+}
+
+.produto-info{
+  font-size: 1.2rem;
+  color: var(--cor-texto);
+  flex: 1;
+  padding: 6%;
+}
+
+.produto-info h1{
+  font-family: var(--fonte-titulos);
+  margin-bottom: 20px;
+  color: var(--cor-destaque);
+  font-size: 2.5rem;
+}
+
+.botao-comprar{
+  font-family: var(--fonte-titulos);
+  display: inline-block;
+  background-color: rgb(233, 193, 138);
+  color: black;
+  font-size: 25px;
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+.botao-voltar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:rgb(201, 181, 151);
+  color: rgb(0, 0, 0);
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+.botao-comprar:hover{
+  transform: scale(1.05);
+  background-color:rgb(221, 201, 172);
+  color: rgb(0, 0, 0);
+}
+
+.botao-voltar:hover{
+  transform: scale(1.05);
+  background-color:rgb(209, 184, 146);
+  color: rgb(0, 0, 0);
+}
+
+/*Fim da parte de Luigi*/
+
+.card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
 .preco {
-  display: block; /* vertical 100% */
+  display: block; /* olhar para que serve*/
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .btn-secundario {
-  display: inline-block;
+  display: inline-block; /* olhar para que serve*/
   border: 2px solid var(--cor-destaque);
   color: var(--cor-destaque);
   padding: 0.5rem 1rem;
@@ -191,15 +308,15 @@ header {
   color: #fff;
 }
 
-/* Contato */
+/* Seção de Contato */
 .contato {
-  background: var(--cor-fundo);
+  background: #fafafa;
   padding: 3rem 2rem;
 }
 
 .contato-form {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* olhar para que serve*/
   text-align: center;
 }
 
@@ -223,7 +340,6 @@ header {
   border-radius: 4px;
   font-size: 1rem;
   resize: none;
-  color: black;
 }
 
 .contato-form button {
@@ -244,17 +360,15 @@ header {
 
 /* Rodapé */
 footer {
-  background: var(--cor-footer-fundo);
-  color: var(--cor-footer-texto);
   text-align: center;
   padding: 2rem;
-  transition: background 0.3s, color 0.3s;
+  background: #f0f0f0;
 }
 
 .social a {
   margin: 0 0.5rem;
   font-size: 1.5rem;
-  color: var(--cor-footer-texto);
+  color: var(--cor-texto);
   transition: color 0.3s;
 }
 
@@ -265,7 +379,7 @@ footer {
 footer p {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: var(--cor-footer-texto);
+  color: #777;
 }
 
 /* Responsividade */
@@ -315,5 +429,48 @@ footer p {
     color: var(--cor-destaque);
     cursor: pointer;
   }
+}
+
+/* SEÇÃO SOBRE */
+.sobre-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  background-color: #fdfdfd;
+  flex-wrap: wrap;
+}
+
+.sobre-texto, .sobre-img {
+  flex: 1 1 400px; /* tamanho mínimo de 400px e expansível */
+  max-width: 500px;
+}
+
+.sobre-texto h1 {
+  font-family: var(--fonte-titulos);
+  font-size: 2.5rem;
+  color: var(--cor-destaque);
+  margin-bottom: 1.5rem;
+}
+
+.sobre-texto p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: var(--cor-texto);
+}
+
+.sobre-img {
+  text-align: center;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 500px;
+  min-width: 280px; /* tamanho mínimo */
+  height: auto;
+  border-radius: 12px;
 }
 /*FIM DA ADIÇAO DE RUAN*/
