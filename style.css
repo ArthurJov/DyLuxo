@@ -42,15 +42,19 @@ header {
   padding: 1rem 2rem;
   background: var(--cor-fundo);
   position: sticky;
-  top: 0px;
-  z-index: 100; 
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
   font-family: var(--fonte-titulos);
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--cor-destaque);
   text-decoration: none;
+}
+
+.nav-list input {
+  display: none; /* olhar para que serve */
 }
 
 .links-container ul {
@@ -62,7 +66,7 @@ header {
 .links-container a {
   text-decoration: none;
   transition: color 0.3s;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
 }
 
 .links-container a:hover {
@@ -72,6 +76,7 @@ header {
 .header-icons a {
   margin-left: 1rem;
   font-size: 1.2rem;
+  color: var(--cor-texto);
   transition: color 0.3s;
 }
 
