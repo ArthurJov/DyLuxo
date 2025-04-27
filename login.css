@@ -6,6 +6,15 @@
     --fonte-titulos: "Playfair Display", serif;
     --fonte-corpo: "Lato", sans-serif;
   }
+
+  [data-theme="dark"] {
+    --cor-fundo: #202020;
+    --cor-texto: #ffffff;
+    --cor-card-fundo: #2a2a2a;
+    --cor-card-texto: #eeeeee;
+    --cor-footer-fundo: #121212;
+    --cor-footer-texto: #cccccc;
+  }
   
   * {
     box-sizing: border-box;
@@ -14,7 +23,7 @@
   }
   
   body {
-    background-color: #f3f3f3;
+    background-color: var(--cor-fundo);
     font-family: var(--fonte-corpo);
   }
   
@@ -38,7 +47,7 @@
   
   /* Formulários */
   .form-container {
-    background-color: white;
+    background-color: var(--cor-fundo);
     border: 2px solid var(--cor-destaque);
     border-radius: 10px;
     padding: 30px;
