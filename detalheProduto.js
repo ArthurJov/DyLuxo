@@ -18,11 +18,10 @@ if (produto) {
     <h1>${produto.nome}</h1>
     <p>${produto.descricao}</p>
     <h2>Preço: R$ ${produto.preco}</h2>
-    <a href="colecao.html" class="botao-voltar">Voltar para a loja</a> `;
+    <button type="submit" class='botao-comprar'> Comprar! </button>`;
 } else {
   document.getElementById('detalhes-produto').innerHTML = `
     <p>Produto não encontrado.</p>
-    <a href="/colecao.html">Voltar</a>
   `;
 }
 

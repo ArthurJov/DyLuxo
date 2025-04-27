@@ -226,9 +226,9 @@ a{
 
 .produto-image img{
   width: 100%;
-
   border-radius: 10px;
   object-fit: cover;
+  border: 1px solid var(--cor-destaque);
 }
 
 .produto-info{
@@ -239,17 +239,42 @@ a{
 }
 
 .produto-info h1{
+  font-family: var(--fonte-titulos);
   margin-bottom: 20px;
   color: var(--cor-destaque);
   font-size: 2.5rem;
 }
 
-.botao-voltar{
+.botao-comprar{
+  font-family: var(--fonte-titulos);
   display: inline-block;
-  background-color: var(--cor-destaque);
-  color: var(--cor-card-texto);
-  border-radius: 5%;
+  background-color: rgb(233, 193, 138);
+  color: black;
+  font-size: 25px;
+  border-radius: 10%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+.botao-voltar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:rgb(201, 181, 151);
+  color: rgb(0, 0, 0);
+  border-radius: 10%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+}
+
+.botao-comprar:hover{
+  transform: scale(1.05);
+  background-color:rgb(221, 201, 172);
+  color: rgb(0, 0, 0);
+}
+
+.botao-voltar:hover{
+  transform: scale(1.05);
+  background-color:rgb(209, 184, 146);
+  color: rgb(0, 0, 0);
 }
 
 /*Fim da parte de Luigi*/
