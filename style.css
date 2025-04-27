@@ -37,8 +37,9 @@ header {
   padding: 1rem 2rem; /* olhar */
   background: var(--cor-fundo);
   position: sticky;
-  top: 0px;
-  z-index: 10; /* olhar */
+  top: 0;
+  z-index: 10;
+
 }
 
 .logo {
@@ -49,7 +50,7 @@ header {
 }
 
 .nav-list input {
-  display: none; /* olhar para que serve*/
+  display: none; /* olhar para que serve */
 }
 
 .links-container ul {
@@ -72,7 +73,8 @@ header {
   margin-left: 1rem;
   font-size: 1.2rem;
   color: var(--cor-texto);
-  transition: 0.3s;
+  transition: color 0.3s;
+
 }
 
 .header-icons a:hover {
@@ -396,7 +398,6 @@ footer p {
 }
 
 /*ADICIONADO POR RUAN*/
-
 /* estilizaçao do nav quando clica no botao menu hamburguer*/
 .links-container ul.active {
   display: flex;  /* Mostra o menu quando a classe "active" for ativada */ /*a classe active so existe quando o javascript adiciona ela*/
@@ -430,8 +431,7 @@ footer p {
   }
 }
 
-
-/* Seção Sobre */
+/* SEÇÃO SOBRE */
 .sobre-container {
   display: flex;
   flex-direction: row;
