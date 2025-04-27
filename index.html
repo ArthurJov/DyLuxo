@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/Logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-    <title>DY LUXO</title>
+    <title>Dy Luxo</title>
 
     <!-- Biblioteca p icones -->
     <link
@@ -16,44 +16,22 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-
   </head>
 
   <body>
-    <script>
-      window.addEventListener('load', function() {
-  const produtos = JSON.parse(localStorage.getItem('produtos')) || [];
-  const containerCards = document.querySelector('.cards');
-  const produtosRecentes = produtos.slice(-3).reverse(); 
-  produtosRecentes.forEach(produto => {
-    const card = document.createElement('article');
-    card.className = 'card';
-
-    card.innerHTML = `
-      <img src="${produto.imagem}" alt="${produto.nome}">
-      <h3>${produto.nome}</h3>
-      <p>${produto.descricao}</p>
-      <p class="preco">R$ ${produto.preco}</p>
-      <a href="/produto.html?id=${produto.id}" class="btn-secundario">Ver detalhes</a>
-    `;
-
-    containerCards.appendChild(card);
-  });
-});
-    </script>
     <!-- Cabeçalho -->
     <header>
+
       <!-- Botão de menu hamburguer -->
       <div class="menu-hamburguer">
         <i class="fa-solid fa-bars"></i>
       </div>
 
-      <a href="index.html" class="logo">DY LUXO</a>
+      <a href="#" class="logo">Dy Luxo</a>
       <nav class="links-container">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="colecao.html">Coleções</a></li>
+          <li><a href="#">Coleções</a></li>
           <li><a href="#">Novidades</a></li>
           <li><a href="sobre.html">Sobre</a></li>
           <li><a href="login.html">Login</a></li>
@@ -83,11 +61,22 @@
         <img src="img/Banner.jpg" alt="Banner da loja" />
       </div>
     </section>
-<!-- teste -->
+
     <!-- Seção de Produtos em Destaque -->
     <section id="colecao" class="destacados">
       <h2>Nossas Peças em Destaque</h2>
       <div class="cards">
+        <article class="card">
+          <img
+            src="img/ColarJoiasColoridas.jpg"
+            alt="Colar De Joias Coloridas"
+          />
+          <h3>Colar Colorido</h3>
+          <p>Colar com 6 joias coloridas</p>
+          <p class="preco">R$ 2.450,00</p>
+          <a href="#" class="btn-secundario">Ver detalhes</a>
+        </article>
+
         <article class="card">
           <img src="img/ColarEsmeraldas.jpeg" alt="Colar Esmeraldas" />
           <h3>Colar Pérola Esmeralda</h3>
@@ -142,4 +131,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
