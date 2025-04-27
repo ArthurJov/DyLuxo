@@ -176,8 +176,25 @@ footer {
   background-color: var(--cor-footer-fundo);
   color: var(--cor-footer-texto);
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
   width: 100%;
   bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.social a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--cor-footer-texto); /* usa variável */
+  transition: color 0.3s;
+}
+
+.social a:hover {
+  color: var(--cor-destaque);
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--cor-footer-texto); /* usa variável */
 }
