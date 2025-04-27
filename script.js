@@ -16,6 +16,7 @@ btnDarkModeToggle.addEventListener('click', function(e) {
   localStorage.setItem('themeSystem', themeSystem);
 });
 
+/* ADICIONADO POR LUIGI */
 //pega os dados no formulário
 const form = document.getElementById('form-produto');
 const listaProdutos = document.getElementById('listaProdutos');
@@ -77,4 +78,15 @@ window.addEventListener('load', function() {
     });
 });
 
+
+/* ADICIONADO POR RUAN */
+// Seleciona o botão hamburguer e o menu
+const menuHamburguer = document.querySelector('.menu-hamburguer');
+const menuLinks = document.querySelector('.links-container ul');
+
+// Quando o botão hamburguer for clicado, alterna a classe "active" no menu
+menuHamburguer.addEventListener('click', () => {
+  menuLinks.classList.toggle('active');  // ativa e desativa classe no menu de links
+});
+/* FIM DA ADIÇÃO DE RUAN */
 
