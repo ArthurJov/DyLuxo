@@ -145,7 +145,7 @@ header {
 }
 
 .card {
-  background: #f9f9f9;
+  background: var(--cor-fundo);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: center;
