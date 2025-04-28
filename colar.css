@@ -262,6 +262,7 @@
     border-radius: 10px;
     object-fit: cover;
     border: 1px solid var(--cor-destaque);
+    min-width: 200px;
   }
   
   .produto-info{
