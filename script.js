@@ -1,4 +1,4 @@
-// Seleciona o botão de Dark Mode
+// DarkMode
 const btnDarkModeToggle = document.getElementById('DarkToggle');
 const htmlElement = document.documentElement;
 
