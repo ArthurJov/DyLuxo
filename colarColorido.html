@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/Logo.png" type="image/png" />
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/colar.css" />
     <title>Produto - Dy Luxo</title>
 
     <!-- Biblioteca p/ ícones -->
@@ -51,9 +51,22 @@
 
     <!-- Conteúdo da página Produtos -->
     <div id="detalhes-produto">
-
-    </div>
-    <a href="colecao.html" class="botao-voltar">Voltar para a loja</a>
+      <div class='produto-container'>
+        <div class='produto-image'>
+        <img src='/img/ColarJoiasColoridas.jpg' alt='colar azul, vermelho' class="produto-image">
+        </div>
+        <div class='produto-info'>
+          <h1>Colar de Pedra Esmeralda</h1>
+          <p> Colar moderno em metal dourado com aro circular e seis pingentes retangulares, cada um com uma pedra colorida. <br> Leve, versátil e perfeito para dar um toque especial ao seu visual. <br> Ideal para usar no dia a dia ou presentear. </p>
+          <h2>Preço: R$ 2.450,00</h2>
+        </div>
+          <div class="produto-botao">
+            <h3> Estoque Disponível:</h3> <br> <h3 class="produto-estoque"> 20 peças por tempo limitado!!!</h3>
+          <button type="submit" class='botao-comprar'> Comprar! </button> <br>
+          <button type="submit" class='botao-carrinho'> Adicionar ao Carrinho </button>
+        </div>
+        </div>
+    <a href="index.html" class="botao-voltar">Voltar para a loja</a>
 
 
     <!-- Rodapé -->
@@ -77,19 +90,8 @@
         </p>
       </footer>
 
-      <!-- JavaScript para exibir opcoes quando o menu hamburguer for clicado-->
-      <script>
-        // Seleciona o botão hamburguer e o menu
-        const menuHamburguer = document.querySelector('.menu-hamburguer');
-        const menuLinks = document.querySelector('.links-container ul');
-      
-        // Quando o botão hamburguer for clicado, alterna a classe "active" no menu
-        menuHamburguer.addEventListener('click', () => {
-          menuLinks.classList.toggle('active');  // ativa/desativa classe no menu de links //o .toggle serve como um "interruptor", adicionando
-          // a classe active caso n exista, e excluindo caso exista.
-        });
-      </script>
-    <script src="detalheProduto.js"> </script>      
+
+    <script src="script.js"> </script>      
   </body>
 </html>
 
